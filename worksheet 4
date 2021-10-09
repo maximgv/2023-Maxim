@@ -1,0 +1,58 @@
+def multiples(1,2start,2end,name):
+	print("Hi,",name,  "... here is your times table")
+	for index in range (2start, 2end+1):
+		print (1, " x ", index, " = ", 1 * index)
+	next index
+end procedure
+
+#main program
+print ("What is your name? ") 
+name = input()
+print ("Enter times table, start number and end number ")
+table = int(input())
+startnum = int(input())
+endnum = int(input())
+multiples(table,startnum,endnum,name)
+
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+def calc(a,b):
+    c = 2
+    x = c *(a + b)
+    y = a - b
+    z = a * b
+    return x, y, z
+
+#main program
+add, subtract, multiply = calc(5,3)
+print (add, subtract, multiply)
+
+
+
+-------------------------------------------------------------------------------
+
+
+def pw(attempt):
+    pword = ""
+    while len(pword)<5 or len(pword)>8:
+        if attempt == 1:
+            print("enter password:")
+        else:
+            print("enter password again:")
+        pword = input()
+        if len(pword)<5 or len(pword)>8:
+            print("Error.  Password must be 6 to 8 characters long")
+    return pword
+
+#main program
+pword1 = getPword(1)
+pword2 = getPword(2)
+while pword1 != pword2:
+    print("Error - passwords do not match")
+    pword1 = getPword(1)
+    pword2 = getPword(2)      
+print("Password change successful")
+
